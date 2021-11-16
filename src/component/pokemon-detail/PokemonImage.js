@@ -17,8 +17,7 @@ class PokemonImage extends React.Component{
         const url = 'https://pokeapi.co/api/v2/pokemon/' + this.props.imagePokemon
         axios.get(url )
         .then(users => {
-            console.log(users.data.sprites.front_default);
-
+            // console.log(users.data.sprites.front_default);
            this.setState({
                users: [users.data]
                

@@ -20,16 +20,6 @@ const PokemonList = (props) => {
         console.log(getPokemons)
     }
 
-    // const searchPokemon = (pokemon) =>{
-    //     pokemon.name === pokemon.name
-
-    //     fetch("'https://pokeapi.co/api/v2/pokemon/" + pokemon.name, {
-    //         method: "GET"
-    //     }).then(()=>{
-    //         console.log(pokemon.name)
-    //     })
-    // }
-
     return (
             <div>
                 <table>

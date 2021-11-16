@@ -5,12 +5,13 @@ import axios from "axios"
 const PokemonCreate = (props) => {
 
     const [getInput,setInput] = useState('')
-    // let [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
 
     // useEffect(() => {
     //     const url = 'https://pokeapi.co/api/v2/pokemon'
     //     axios.get(url)
     //     .then(response => setUsers(
+    //         console.log(response.data.results)
     //         response = response.data.results))
     // }, [])
 
@@ -20,8 +21,6 @@ const PokemonCreate = (props) => {
         const newPokemon = {
             id: Math.floor(Math.random() * 100) + 1,
             nickname : getInput,
-            
-            
         }
         props.onCreatePokemon(newPokemon)
         setInput('')
