@@ -29,7 +29,7 @@ class PokemonGetDetail extends React.Component{
         return(
             <div>
                 {this.state.users.map((detail)=>(
-                     <h4>Pokemon Type: {detail.type.name} </h4>
+                     <h4>Pokemon Type: {detail.type.name}</h4>
                 ))}
             </div>
             
