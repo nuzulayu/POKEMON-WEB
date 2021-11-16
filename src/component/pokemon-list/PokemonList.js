@@ -5,6 +5,7 @@ import PokemonCatch from '../pokemon-catch/PokemonCatch';
 import PokemonCreate from '../pokemon-create/PokemonCreate';
 import MyPokemon from '../my-pokemon/MyPokemon';
 import PokemonGetDetail from '../pokemon-detail/PokemonGetDetail';
+import PokemonImage from '../pokemon-detail/PokemonImage';
 
 const PokemonList = (props) => {
 
@@ -46,6 +47,7 @@ const PokemonList = (props) => {
                                     <td></td>
                                     <PokemonDetail trigger={linkPopUp} setTrigger={setLinkPopUp}>
                                         <h2> Pokemon Details</h2>
+                                        <PokemonImage imagePokemon={pokemon.name}/>
                                         <h4 >Pokemon Name: {pokemon.name}</h4>
                                         <PokemonGetDetail detailsPokemon={pokemon.name}/>
                                         <button onClick={()=> setButtonPopup(true)}>catch</button>

@@ -3,7 +3,7 @@ import React from 'react'
 import './PokemonDetail.css'
 
 
-class PokemonGetDetail extends React.Component{
+class PokemonImage extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -13,14 +13,14 @@ class PokemonGetDetail extends React.Component{
     }
     
      componentDidMount(){
-        console.log(this.props.detailsPokemon)
-        const url = 'https://pokeapi.co/api/v2/pokemon/' + this.props.detailsPokemon
+        console.log(this.props.imagePokemon)
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + this.props.imagePokemon
         axios.get(url )
         .then(users => {
-            console.log(users.data);
+            console.log(users.data.sprites.front_default);
 
            this.setState({
-               users: users.data.types
+               users: [users.data]
                
            })
         })
@@ -31,7 +31,7 @@ class PokemonGetDetail extends React.Component{
                 <div>
                     {this.state.users.map((detail)=>(
                         <div>
-                            <h4>Pokemon Type: {detail.type.name}</h4>
+                            <img src={detail.sprites["front_default"]} />   
                         </div>
                     ))}
                 </div>
@@ -42,4 +42,4 @@ class PokemonGetDetail extends React.Component{
 }
 
 
-export default PokemonGetDetail
+export default PokemonImage

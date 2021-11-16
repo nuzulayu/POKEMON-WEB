@@ -16,7 +16,6 @@ const MyPokemon = (props) => {
         <table>
             <thead>
                 <tr>
-                    <th>Pokemon Name</th>
                     <th>Pokemon Nickname</th>
                     <th>Pokemon Total</th>
                     <th>Action</th>
