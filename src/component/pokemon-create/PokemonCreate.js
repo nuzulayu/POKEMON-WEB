@@ -5,16 +5,6 @@ import axios from "axios"
 const PokemonCreate = (props) => {
 
     const [getInput,setInput] = useState('')
-    const [users, setUsers] = useState([]);
-
-    // useEffect(() => {
-    //     const url = 'https://pokeapi.co/api/v2/pokemon'
-    //     axios.get(url)
-    //     .then(response => setUsers(
-    //         console.log(response.data.results)
-    //         response = response.data.results))
-    // }, [])
-
 
     const handleSubmit = (event) =>{
         event.preventDefault()
